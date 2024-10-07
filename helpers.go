@@ -14,7 +14,7 @@ import (
 // NewMessage creates a new Message.
 //
 // chatID is where to send it, text is the message text.
-func NewMessage(chatID int64, text string) MessageConfig {
+func NewMessage(chatID int64, text string, messageThreadId int64) MessageConfig {
 	return MessageConfig{
 		BaseChat: BaseChat{
 			ChatID:           chatID,
@@ -22,6 +22,7 @@ func NewMessage(chatID int64, text string) MessageConfig {
 		},
 		Text:                  text,
 		DisableWebPagePreview: false,
+		MessageThreadId:       messageThreadId,
 	}
 }
 
