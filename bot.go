@@ -95,6 +95,7 @@ func (bot *BotAPI) MakeRequest(endpoint string, params Params) (*APIResponse, er
 	if bot.Debug {
 		log.Printf("Endpoint: %s, params: %v\n", endpoint, params)
 	}
+	fmt.Println(params)
 
 	method := fmt.Sprintf(bot.apiEndpoint, bot.Token, endpoint)
 
